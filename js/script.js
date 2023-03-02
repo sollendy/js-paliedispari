@@ -30,4 +30,4 @@ function testPalindromia(parola) {
 
 }
 
-console.log(parolaPa);
+console.log(parola);
