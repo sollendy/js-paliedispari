@@ -28,22 +28,22 @@ function testPalindromia() {
         
         // check if first and last string are same
         if (parola[i] !== parola[len - 1 - i]) {
-            //let newEl = document.createElement("b");
-            //newEl.innerHTML = "non vi è palindromia";
-            //esito.append(newEl);
+            let newEl = document.createElement("b");
+            newEl.innerHTML = "non vi è palindromia";
+            esito.append(newEl);
             return 'non è palindroma';
 
         } else {
-            //let newEl = document.createElement("b");
-            //newEl.innerHTML = "palindromia confermata";
-            //esito.append(newEl);
+            let newEl = document.createElement("b");
+            newEl.innerHTML = "palindromia confermata";
+            esito.append(newEl);
             return 'palindromia confermata';
         }
     }
 }
 
 btnPalEl.addEventListener('click', function() {
-    testPalindromia(parola);
+    testPalindromia();
     console.log(testPalindromia);
 });
 
