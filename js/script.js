@@ -32,7 +32,6 @@ function testPalindromia() {
             newEl.innerHTML = "non vi è palindromia";
             esito.append(newEl);
             return 'non è palindroma';
-
         } else {
             let newEl = document.createElement("b");
             newEl.innerHTML = "palindromia confermata";
