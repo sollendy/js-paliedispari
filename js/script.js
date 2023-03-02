@@ -15,7 +15,7 @@ const btnPalEl = document.getElementById('test-btn');
 const esito = document.getElementById('campo-esito');
 
 //creo una variabile per la parola da analizzare
-let parola = prompt('inserisci una parola');
+let parola = CampoPaEl.value;
 
 //creo la funzione per la verifica della palindromia
 function testPalindromia(parola) {
@@ -27,16 +27,46 @@ function testPalindromia(parola) {
  
         // check if first and last string are same
         if (parola[i] !== parola[len - 1 - i]) {
-
-            return 'non è palindroma';
+            let newEl = document.createElement("b");
+            esito.append(newEl);
+            newEl.innerHTML = "non vi è palindromia";
+            //return 'non è palindroma';
 
         } else {
-
-            return 'palindromia confermata';
+            let newEl = document.createElement("b");
+            esito.append(newEl);
+            newEl.innerHTML = "palindromia confermata";
+            //return 'palindromia confermata';
 
         }
     }
 }
+
+btnPalEl.addEventListener('click', function testPalindromia(parola) {
+    // find the length of a string
+    const len = parola.length;
+
+    // loop through half of the string
+   for (let i = 0; i < len / 2; i++) {
+
+       // check if first and last string are same
+       if (parola[i] !== parola[len - 1 - i]) {
+           let newEl = document.createElement("b");
+           esito.append(newEl);
+           newEl.innerHTML = "non vi è palindromia";
+           //return 'non è palindroma';
+
+       } else {
+           let newEl = document.createElement("b");
+           esito.append(newEl);
+           newEl.innerHTML = "palindromia confermata";
+           //return 'palindromia confermata';
+
+       }
+   }
+} {
+    
+});
 
 const value = testPalindromia(parola);
 
