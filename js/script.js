@@ -41,6 +41,7 @@ function testPalindromia() {
     }
 }
 
+console.log("fuori l'evento", testPalindromia);
 
 btnPalEl.addEventListener('click', function() {
     value;
@@ -48,6 +49,5 @@ btnPalEl.addEventListener('click', function() {
 });
 
 /*
-console.log("fuori l'evento", testPalindromia);
 const value = testPalindromia();
 */
