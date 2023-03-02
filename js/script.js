@@ -41,12 +41,13 @@ function testPalindromia() {
     }
 }
 
+
 btnPalEl.addEventListener('click', function() {
-    testPalindromia();
-    console.log(testPalindromia);
+    value;
+    console.log("dentro l'evento", testPalindromia);
 });
 
 /*
-const value = testPalindromia(parola);
-console.log(testPalindromia);
+console.log("fuori l'evento", testPalindromia);
+const value = testPalindromia();
 */
