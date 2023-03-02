@@ -27,7 +27,6 @@ function testPalindromia(parola) {
          }
      }
      return 'palindromia confermata';
-
 }
 
-console.log(parola);
+console.log(testPalindromia);
