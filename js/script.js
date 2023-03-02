@@ -19,14 +19,19 @@ function testPalindromia(parola) {
      const len = parola.length;
 
      // loop through half of the string
-     for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < len / 2; i++) {
  
-         // check if first and last string are same
-         if (parola[i] !== parola[len - 1 - i]) {
-             return 'non è palindroma';
-         }
-     }
-     return 'palindromia confermata';
+        // check if first and last string are same
+        if (parola[i] !== parola[len - 1 - i]) {
+            
+            return 'non è palindroma';
+
+        } else {
+
+            return 'palindromia confermata';
+
+        }
+    }
 }
 
 const value = testPalindromia(parola);
