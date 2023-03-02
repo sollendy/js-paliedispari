@@ -11,7 +11,7 @@ const CampoPaEl = document.getElementById('campo-palindroma');
 //creo una variabile per il bottone
 const btnPalEl = document.getElementById('test-btn');
 
-const parola = prompt('inserisci una parola');
+const parola = CampoPaEl.value;
 
 //creo la funzione per la verifica della palindromia
 function testPalindromia(parola) {
@@ -29,4 +29,6 @@ function testPalindromia(parola) {
      return 'palindromia confermata';
 }
 
-console.log(testPalindromia);
+const value = testPalindromia(parola);
+
+console.log(value);
