@@ -11,7 +11,11 @@ const CampoPaEl = document.getElementById('campo-palindroma');
 //creo una variabile per il bottone
 const btnPalEl = document.getElementById('test-btn');
 
-const parola = prompt('inserisci una parola');
+//creo una costante per lo spazio dell'esito
+const esito = document.getElementById('campo-esito');
+
+//creo una variabile per la parola da analizzare
+let parola = prompt('inserisci una parola');
 
 //creo la funzione per la verifica della palindromia
 function testPalindromia(parola) {
@@ -23,7 +27,7 @@ function testPalindromia(parola) {
  
         // check if first and last string are same
         if (parola[i] !== parola[len - 1 - i]) {
-            
+
             return 'non è palindroma';
 
         } else {
