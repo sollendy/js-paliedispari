@@ -15,11 +15,11 @@ const btnPalEl = document.getElementById('test-btn');
 const esito = document.getElementById('campo-esito');
 
 //creo una variabile per la parola da analizzare
-let parola;
+let parola = CampoPaEl;
 
 //creo la funzione per la verifica della palindromia
-function testPalindromia() {
-    
+function testPalindromia(text) {
+    esito.innerHTML ="";
     // find the length of a string
     const len = parola.length;
 
