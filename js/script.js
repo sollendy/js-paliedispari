@@ -128,4 +128,16 @@ btn.addEventListener('click', function() {
 });
 
 //creo le variabili per gli elementi html
+const evenOddEl = document.getElementById("scelta").value;
 const userNumEl = document.getElementById('numero-utente').value;
+const buttonEl = document.getElementById("play-btn");
+const resultEl = document.getElementById("esito");
+
+//creo la variabile del numero scelto dal computer
+let randomNum = Math.floor(Math.random() * 5) + 1;
+//console.log(randomNum);
+let result = userNumEl + randomNum;
+
+buttonEl.addEventListener('click', function(){
+    resultEl.innerHTML = `risultato: ${result}`;
+});
