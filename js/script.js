@@ -129,4 +129,3 @@ btn.addEventListener('click', function() {
 
 //creo le variabili per gli elementi html
 const userNumEl = document.getElementById('numero-utente').value;
-let randomNumber = ;
