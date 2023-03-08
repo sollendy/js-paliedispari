@@ -137,11 +137,12 @@ const resultEl = document.getElementById("esito");
 
 buttonEl.addEventListener('click', sumNum);
 
-function sumNum(somma) {
+function sumNum(numero) {
     let randomNum = Math.floor(Math.random() * 5) + 1;
     console.log(randomNum);
-    let result = (1 * userNumEl.value) + (1 * randomNum);
-    resultEl.append(`risultato: ${result}`);
+    let somma = (1 * userNumEl.value) + (1 * randomNum);
+    return somma;
+    //resultEl.append(`risultato: ${result}`);
 }
 
 // function condizioni() {
