@@ -135,13 +135,37 @@ const resultEl = document.getElementById("esito");
 
 //creo la variabile del numero scelto dal computer
 
-buttonEl.addEventListener('click', sumNum);
-
-function sumNum(numero) {
+buttonEl.addEventListener('click', function() {
+    let input = userNumEl.value;
     let randomNum = Math.floor(Math.random() * 5) + 1;
-    console.log(randomNum);
-    let somma = (1 * userNumEl.value) + (1 * randomNum);
-    return somma;
+    //let test = "pari";
+    let somma = sumNum(input, randomNum);
+    console.log(somma);
+    console.log(evenOddEl.value);
+    if(evenOddEl.value == somma) {
+        resultEl.innerHTML = `hai vinto, io ho scelto ${randomNum}, la somma è ${somma}`;
+    } else {
+        resultEl.innerHTML = `hai perso, io ho scelto ${randomNum}, la somma è ${somma}`;
+    }
+
+});
+
+
+//funzioni
+function sumNum(numero, numeroCPU) {
+    console.log(numeroCPU);
+    console.log("primo valore della somma: " + numero * 1);
+    console.log("secondo valore della somma: " + numeroCPU * 1);
+    let somma = (1 * numero) + (1 * numeroCPU);
+    console.log("somma: " + somma);
+    let result;
+    if (somma % 2 == 0) {
+        result = "pari";
+    } else {
+        result = "dispari";
+    }
+    return result;
+    
     //resultEl.append(`risultato: ${result}`);
 }
 
