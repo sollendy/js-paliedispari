@@ -95,13 +95,13 @@ function testPalindromia() {
 
         console.log('parolaIsPalindroma', parolaIsPalindroma)
         if (parolaIsPalindroma) {
-            esito.innerHTML = 'Parola palindroma'
+            esito.innerHTML = 'Parola palindroma';
         } else {
-            esito.innerHTML = 'Parola NON palindroma'
+            esito.innerHTML = 'Parola NON palindroma';
         }
     } else {
-        let f = firstPartParola
-        let l = lastPartParola
+        let f = firstPartParola;
+        let l = lastPartParola;
 
         if (f.length > l.length) f = f.filter((_, i) => i !== f.length - 1)
         else l = l.filter((_, i) => i !== l.length - 1)
@@ -111,13 +111,13 @@ function testPalindromia() {
 
         for (let i = 0; i < f.length; i += 1)
             if (f[i] !== l[i]) 
-                parolaIsPalindroma = false
+                parolaIsPalindroma = false;
 
         console.log('parolaIsPalindroma', parolaIsPalindroma)
         if (parolaIsPalindroma) {
-            esito.innerHTML = 'Parola palindroma'
+            esito.innerHTML = 'Parola palindroma';
         } else {
-            esito.innerHTML = 'Parola NON palindroma'
+            esito.innerHTML = 'Parola NON palindroma';
         }
     }
 }
@@ -128,16 +128,16 @@ btn.addEventListener('click', function() {
 });
 
 //creo le variabili per gli elementi html
-const evenOddEl = document.getElementById("scelta").value;
-const userNumEl = document.getElementById('numero-utente').value;
+const evenOddEl = document.getElementById("scelta");
+const userNumEl = document.getElementById('numero-utente');
 const buttonEl = document.getElementById("play-btn");
 const resultEl = document.getElementById("esito");
 
 //creo la variabile del numero scelto dal computer
 let randomNum = Math.floor(Math.random() * 5) + 1;
-//console.log(randomNum);
-let result = userNumEl + randomNum;
+console.log(randomNum);
+let result = userNumEl.value + randomNum;
 
 buttonEl.addEventListener('click', function(){
-    resultEl.innerHTML = `risultato: ${result}`;
+    resultEl.append(`risultato: ${result}`);
 });
