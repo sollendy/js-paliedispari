@@ -80,8 +80,8 @@ function testPalindromia() {
     const lastPartParola = parolaArray.filter((lettera, index) => index >= len / 2).reverse()
 
     // console log a caso
-    console.log('firstPartParola', firstPartParola)
-    console.log('lastPartParola', lastPartParola)
+    console.log('firstPartParola', firstPartParola);
+    console.log('lastPartParola', lastPartParola);
 
     // controllo se la parola è pari confrontando le lunghezza delle due parti
     parolaIsPalindroma = true;
@@ -91,7 +91,7 @@ function testPalindromia() {
         //nel caso in cui è pari confronto ogni singolo elemento dei due array 
         for (let i = 0; i < firstPartParola.length; i += 1)
             if (firstPartParola[i] !== lastPartParola[i]) 
-                parolaIsPalindroma = false
+                parolaIsPalindroma = false;
 
         console.log('parolaIsPalindroma', parolaIsPalindroma)
         if (parolaIsPalindroma) {
@@ -106,8 +106,8 @@ function testPalindromia() {
         if (f.length > l.length) f = f.filter((_, i) => i !== f.length - 1)
         else l = l.filter((_, i) => i !== l.length - 1)
 
-        console.log('firstPartParola', f)
-        console.log('lastPartParola', l)
+        console.log('firstPartParola', f);
+        console.log('lastPartParola', l);
 
         for (let i = 0; i < f.length; i += 1)
             if (f[i] !== l[i]) 
@@ -134,10 +134,18 @@ const buttonEl = document.getElementById("play-btn");
 const resultEl = document.getElementById("esito");
 
 //creo la variabile del numero scelto dal computer
-let randomNum = Math.floor(Math.random() * 5) + 1;
-console.log(randomNum);
-let result = userNumEl.value + randomNum;
 
-buttonEl.addEventListener('click', function(){
+buttonEl.addEventListener('click', sumNum);
+
+function sumNum(somma) {
+    let randomNum = Math.floor(Math.random() * 5) + 1;
+    console.log(randomNum);
+    let result = (1 * userNumEl.value) + (1 * randomNum);
     resultEl.append(`risultato: ${result}`);
-});
+}
+
+// function condizioni() {
+//     if () {
+
+//     }
+// }
