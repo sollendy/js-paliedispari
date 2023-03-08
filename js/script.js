@@ -147,7 +147,6 @@ buttonEl.addEventListener('click', function() {
     } else {
         resultEl.innerHTML = `hai perso, io ho scelto ${randomNum}, la somma è ${somma}`;
     }
-
 });
 
 
